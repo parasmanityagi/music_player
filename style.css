@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
+    0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(
+      18% 28% at 24% 50%,
+      #cefaffff 7%,
+      #073aff00 100%
+    ),
+    radial-gradient(18% 28% at 18% 71%, #ffffff59 6%, #073aff00 100%),
+    radial-gradient(70% 53% at 36% 76%, #73f2ffff 0%, #073aff00 100%),
+    radial-gradient(42% 53% at 15% 94%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(42% 53% at 34% 72%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(18% 28% at 35% 87%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(31% 43% at 7% 98%, #ffffffff 24%, #073aff00 100%),
+    radial-gradient(21% 37% at 72% 23%, #d3ff6d9c 24%, #073aff00 100%),
+    radial-gradient(35% 56% at 91% 74%, #8a4ffff5 9%, #073aff00 100%),
+    radial-gradient(74% 86% at 67% 38%, #6dffaef5 24%, #073aff00 100%),
+    linear-gradient(125deg, #4eb5ffff 1%, #4c00fcff 100%);
+    overflow: auto;
+}
+
+#container::-webkit-scrollbar{
+  display: none;
+}
+
+
+.active {
+  color: white;
+  color: blue;
+}
+
+.active > span {
+  text-decoration: underline;
+}
+
+#sidebar_user_panel>div{
+  cursor: pointer;
+}
+
+#sidebar_user_panel:first-child{
+  cursor: default;
+}
+
+#music_player > div > div > span {
+  cursor: pointer;
+}
+
+
+
+#right-container {
+
+    visibility: hidden;
+    padding-bottom: 20px;
+}
+
+#playlist_container>div::-webkit-scrollbar{
+  display: none;
+}
+
+#playlist_container>div{
+  max-height: 600px;
+}
+
+#playlist_container>div>div{
+  cursor: pointer;
+}
+
+
+
+
+.progress-container {
+  /* flex-grow: 1; */
+  height: 7px !important;
+  background-color: #ddd;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  background-color: #007bff !important;
+  height: 7px !important;
+  width: 0px;
+  border-radius: 5px;
+}
+
+
+.buttons>span{
+  cursor: pointer;
+}
+
+
+#music_player>div>div:first-child > img{
+    height: 100% !important;
+  }
+@media (min-width:1200px){
+  #music_player>div>div:first-child{
+    height: 70% !important;
+  }
+}
+@media (min-width:700px){
+  #music_player>div>div:first-child{
+    height: 50%;
+  }
+}
+@media (max-width:700px){
+  #music_player>div>div:first-child{
+    height: 40%;
+  }
+}
