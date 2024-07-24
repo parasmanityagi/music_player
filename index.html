@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player</title>
 
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
     <!-- external css -->
     <link rel="stylesheet" href="./style.css" />
 
@@ -49,7 +55,14 @@
             <i class="bi bi-house"></i><span> Home</span>
           </div>
           <div class="ps-2 mb-2" id="wishlist_link">
-            <i class="fa-regular fa-heart"></i><span> Wishlist<span id="wishlist_count" class="ms-1 text-dark bg-light rounded-circle p-1 fw-bolder" style="font-size: 12px;text-decoration: 'none !important';"></span></span>
+            <i class="fa-regular fa-heart"></i
+            ><span>
+              Wishlist<span
+                id="wishlist_count"
+                class="ms-1 text-dark bg-light rounded-circle p-1 fw-bolder"
+                style="font-size: 12px; text-decoration: 'none !important'"
+              ></span
+            ></span>
           </div>
           <div class="ps-2 mb-2">
             <i class="fa-regular fa-user"></i> <span> Artist</span>
@@ -64,8 +77,12 @@
 
         <!-- music player section -->
         <div id="music_player" class="col" style="min-height: 100vh">
-          <div class="h-100 d-flex justify-content-center align-items-center flex-column" >
-            <div class="w-75 d-flex flex-column align-items-center justify-content-center" >
+          <div
+            class="h-100 d-flex justify-content-center align-items-center flex-column"
+          >
+            <div
+              class="w-75 d-flex flex-column align-items-center justify-content-center"
+            >
               <img
                 id="song_img"
                 src="./assets/download.jpeg"
@@ -75,27 +92,59 @@
               <h6 id="song_name">Song name</h6>
               <p id="song_desc">song desc</p>
             </div>
-            <div class="w-100 d-flex align-items-center justify-content-center gap-2 flex-column">
-
-              <div class="d-flex ps-1 flex-row justify-content-center w-100 align-items-center gap-2">
-                <div id="audio_current_time" class="text-primary">00:00</div>  
+            <div
+              class="w-100 d-flex align-items-center justify-content-center gap-2 flex-column"
+            >
+              <div
+                class="d-flex ps-1 flex-row justify-content-center w-100 align-items-center gap-2"
+              >
+                <div id="audio_current_time" class="text-primary">00:00</div>
                 <div class="w-100">
                   <div id="progress-container" class="progress-container">
-                  <div id="progress" class="progress"></div>
-                </div>
+                    <div id="progress" class="progress"></div>
+                  </div>
                 </div>
                 <div id="audio_duration" class="text-dark">00:00</div>
               </div>
               <div class="buttons d-flex align-items-center gap-2">
-                <span id="shuffle" class="py-1 px-2 rounded-circle text-light bg-dark fs-4"><i class="bi bi-shuffle"></i></span>
-                <span id="prev_btn" class="py-1 px-2 text-light rounded-circle bg-dark fs-4"><i class="bi bi-arrow-left"></i></span>
-                <audio id="audio" class="d-none" src="./assets/climax.mp3" type="audio/mpeg">
+                <span
+                  id="shuffle"
+                  class="py-1 px-2 rounded-circle text-light bg-dark fs-4"
+                  ><i class="bi bi-shuffle"></i
+                ></span>
+                <span
+                  id="prev_btn"
+                  class="py-1 px-2 text-light rounded-circle bg-dark fs-4"
+                  ><i class="bi bi-arrow-left"></i
+                ></span>
+                <audio
+                  id="audio"
+                  class="d-none"
+                  src="./assets/climax.mp3"
+                  type="audio/mpeg"
+                >
                   Your browser does not support the audio element.
                 </audio>
-                <span id="audio_pause_btn" class="px-2 py-1 rounded-circle fs-1 mx-2 bg-dark text-light"><i class="bi bi-play-fill"></i></span>      
-                <span id="next_btn" class="py-1 px-2 text-light rounded-circle bg-dark fs-4"><i class="bi bi-arrow-right"></i></span>
-                <span id="repeat_all" class="py-1 px-2 text-light rounded-circle bg-dark fs-4"><i class="bi bi-repeat"></i></span>
-                <span id="wishlist" class="py-1 px-2 text-light rounded-circle bg-dark fs-4"><i class="bi bi-heart"></i></span>
+                <span
+                  id="audio_pause_btn"
+                  class="px-2 py-1 rounded-circle fs-1 mx-2 bg-dark text-light"
+                  ><i class="bi bi-play-fill"></i
+                ></span>
+                <span
+                  id="next_btn"
+                  class="py-1 px-2 text-light rounded-circle bg-dark fs-4"
+                  ><i class="bi bi-arrow-right"></i
+                ></span>
+                <span
+                  id="repeat_all"
+                  class="py-1 px-2 text-light rounded-circle bg-dark fs-4"
+                  ><i class="bi bi-repeat"></i
+                ></span>
+                <span
+                  id="wishlist"
+                  class="py-1 px-2 text-light rounded-circle bg-dark fs-4"
+                  ><i class="bi bi-heart"></i
+                ></span>
               </div>
             </div>
           </div>
@@ -107,10 +156,7 @@
           <div id="playlist_container" class="h-70 px-1">
             <h4>Wishlist <span>: Empty</span></h4>
             <!-- playlist item  -->
-            <div class="overflow-auto">
-
-
-            </div>
+            <div class="overflow-auto"></div>
           </div>
         </div>
       </div>
