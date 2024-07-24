@@ -2,6 +2,11 @@
 
 A feature-rich music player application built with HTML, CSS,Bootstrap and JavaScript. It supports custom progress bar, shuffle, repeat, and wishlist functionalities. Enjoy your favorite songs with a seamless user experience!
 
+## Live View
+
+You can view the live version of the project [here](https://music-player-custom.netlify.app/).
+
+
 ## Features
 
 - **Play/Pause**: Play or pause the current song.
