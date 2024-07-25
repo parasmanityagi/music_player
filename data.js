@@ -1,5 +1,4 @@
-
-export const songs = [
+const songsList = [
   {
     id: "1",
     title: "Shape of You",
@@ -161,3 +160,5 @@ export const songs = [
     src: "./assets/you-are-my-hope.mp3",
   },
 ];
+
+export default songsList;

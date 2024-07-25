@@ -1,4 +1,5 @@
-import { songs } from "./data.js";
+import songsList from './data.js'
+let songs = songsList;
 
 let div = document.getElementById("sidebar_user_panel");
 let divs = div.getElementsByTagName("div");
@@ -34,7 +35,10 @@ let audio_current_time = document.getElementById("audio_current_time");
 let audio_duration = document.getElementById("audio_duration");
 
 let idx = 0;
+let isShuffle = false;
+let isRepeatAll = false;
 let wishlist_songs = [];
+let originalSongs = [...songs];
 
 function updateSongDetails() {
   songName.innerHTML = songs[idx].title;
@@ -74,8 +78,15 @@ function shuffleSongs(songs) {
 }
 
 let shuffle = () => {
-  shuffle_btn.childNodes[0].classList.add("text-primary");
-  shuffleSongs(songs);
+  if (!isShuffle) {
+    shuffle_btn.childNodes[0].classList.add("text-primary");
+    shuffleSongs(songs); 
+    isShuffle = true;
+  } else {
+    shuffle_btn.childNodes[0].classList.remove("text-primary");
+    songs = [...originalSongs]; 
+    isShuffle = false;
+  }
   idx = 0;
   updateSongDetails();
   audio.play();
@@ -83,10 +94,20 @@ let shuffle = () => {
 };
 
 let repeatAll = () => {
-  repeat_all_btn.childNodes[0].classList.add("text-primary");
-  audio.play();
-  audio_pause_btn.children[0].className = "bi bi-pause-fill";
-  audio.addEventListener("ended", next);
+  if (!isRepeatAll) {
+    repeat_all_btn.childNodes[0].classList.add("text-primary");
+    isRepeatAll = true;
+    audio.play();
+    audio_pause_btn.children[0].className = "bi bi-pause-fill";
+    audio.addEventListener("ended", next);
+  } else {
+    repeat_all_btn.childNodes[0].classList.remove("text-primary");
+    isRepeatAll = false;
+    audio.addEventListener("ended", ()=>{
+      audio.pause();
+      audio_pause_btn.children[0].className = "bi bi-play-fill";
+    })
+  } 
 };
 
 function updateWishlistDisplay() {
